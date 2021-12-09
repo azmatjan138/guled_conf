@@ -1,0 +1,165 @@
+{
+  "template": "fraud",
+  "mappings" : {"properties":
+	  {
+	"merch_location":
+		{"type":"geopoint"},
+	"location":
+        	{"type":"geopoint"},
+	 "amt": {
+         	"type": "float"
+      },
+      "category": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "cc_num": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "city": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "city_pop": {
+        "type": "long"
+      },
+      "dob": {
+        "type": "date"
+      },
+      "first": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "gender": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "is_fraud": {
+        "type": "long"
+      },
+      "job": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "last": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "lat": {
+        "type": "float"
+      },
+      "long": {
+        "type": "float"
+      },
+      "merch_lat": {
+        "type": "float"
+      },
+      "merch_long": {
+        "type": "float"
+      },
+      "merchant": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "num": {
+        "type": "long"
+      },
+      "state": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "street": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "tags": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "trans_date_trans_time": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "trans_num": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "unix_time": {
+        "type": "long"
+      },
+      "zip": {
+        "type": "long"
+      },
+      "@timestamp":{"type" : "date" }
+  }},
+  "settings": {
+  "number_of_shards": "2",
+  "number_of_replicas": "3",
+  "index.refresh_interval" : "1s"}
+}

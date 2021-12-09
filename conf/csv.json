@@ -1,0 +1,76 @@
+{
+  "template": "cap",
+  "mappings" : {"properties":
+	  {
+	"points": {
+          "type": "integer"
+        },
+        "location": {
+          "type": "geo_point"
+        },
+        "cust_code": {
+          "type": "keyword"
+        },
+        "cust_level": {
+          "type": "integer"
+        },
+        "cust_name": {
+          "type": "text",
+	  "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "jlxh": {
+          "type": "integer"
+        },
+        "last_date_from": {
+          "type": "keyword"
+        },
+        "last_points": {
+          "type": "integer"
+        },
+        "last_points_from_code": {
+          "type": "integer"
+        },
+        "last_points_from_text": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "org_code": {
+          "type": "integer"
+        },
+        "org_text": {
+          "type": "text",
+          "fields": {
+		  "keyword": { "type": "keyword","ignore_above": 256}
+	  }},
+        "sex_code": {
+          "type": "integer"
+        },
+        "sex_text": {
+          "type": "keyword"
+        },
+        "total_consumption_points": {
+          "type": "integer"
+        },
+        "total_gather_points": {
+          "type": "integer" 
+	},
+	"last_login_method": {
+          "type": "keyword"
+        },
+	"@timestamp":{"type" : "date" }
+  }},
+  "settings": {
+  "number_of_shards": "2",
+  "number_of_replicas": "3",
+  "index.refresh_interval" : "1s"}
+}

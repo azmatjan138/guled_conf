@@ -1,0 +1,2 @@
+test_oracle_one.sql:
+SELECT * FROM(SELECT TL.*,ROWNUM rn FROM (SELECT * FROM TEST_LOGSTASH) TL) WHERE RN > :sql_last_value
